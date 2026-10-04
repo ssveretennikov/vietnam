@@ -1,0 +1,492 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Вьетнамские флешбеки</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@600;800;900&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column (40rem) on a three-track grid; media breaks out of it.
+   Every frame carries an amber film-camera date stamp with its real shooting time,
+   and a sticky tracker shows which day of the trip the story has jumped to. */
+:root{
+  --bg:#ECF1EB;            /* celadon glaze */
+  --surface:#F8FAF6;
+  --ink:#13211E;
+  --ink-soft:#4B5C56;
+  --line:#C6D2C9;
+  --accent:#BE1558;        /* dragon fruit */
+  --accent-ink:#FFFFFF;
+  --sea:#0A6A6A;
+  --stamp:#FFB54A;         /* film date-stamp amber, sits on photos in both themes */
+  --stamp-shadow:rgba(20,8,0,.75);
+  --on-photo:#FFFFFF;
+  --photo-scrim:rgba(8,14,20,.62);
+  --display:"Sofia Sans Extra Condensed","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --body:"Literata",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --col:40rem;
+  --gutter:clamp(16px,4vw,40px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1220;          /* sleeper bus at night */
+    --surface:#131C30;
+    --ink:#E8EDF6;
+    --ink-soft:#9EABC3;
+    --line:#283450;
+    --accent:#FF5C9F;
+    --accent-ink:#1A0410;
+    --sea:#62D2C9;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1220;
+  --surface:#131C30;
+  --ink:#E8EDF6;
+  --ink-soft:#9EABC3;
+  --line:#283450;
+  --accent:#FF5C9F;
+  --accent-ink:#1A0410;
+  --sea:#62D2C9;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.125rem;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,video{display:block;max-width:100%;height:auto}
+p{margin:0;text-wrap:pretty}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* ---------- tracker ---------- */
+.tracker{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.55rem var(--gutter);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase}
+.tr-now{display:flex;align-items:baseline;gap:.6rem;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tr-label{color:var(--accent);font-weight:600}
+.tr-days{display:flex;gap:.3rem;list-style:none;margin:0;padding:0;font-variant-numeric:tabular-nums}
+.tr-days li{width:1.55rem;height:1.55rem;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--ink-soft);font-size:.62rem;transition:background .35s,color .35s,border-color .35s}
+.tr-days li.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+@media (max-width:640px){
+  .tr-days li{width:.5rem;height:.5rem;font-size:0;border-color:var(--ink-soft)}
+  .tr-days li.on{width:.5rem}
+  .tr-days{gap:.28rem;align-items:center}
+}
+
+/* ---------- page frame ---------- */
+.page{padding-inline:var(--gutter);padding-block:0 5rem}
+.grid3{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,var(--col)) minmax(0,1fr);row-gap:1.35rem}
+.grid3 > *{grid-column:2;min-width:0}
+.story{display:flex;flex-direction:column;gap:clamp(3.5rem,8vw,6rem);margin-top:clamp(2.25rem,5vw,3.5rem)}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(2rem,6vw,4.5rem);display:flex;flex-direction:column;gap:clamp(1.25rem,3vw,2rem);max-width:76rem;margin-inline:auto}
+.route{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:.35rem .7rem}
+.route b{color:var(--accent);font-weight:600}
+h1{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(4rem,18.5vw,13rem);line-height:.82;letter-spacing:-.012em;margin:0;max-width:100%;overflow-wrap:break-word}
+h1 span{display:block}
+h1 .l2{color:var(--accent)}
+.dek{font-size:clamp(1.2rem,2.4vw,1.55rem);line-height:1.4;max-width:34ch;margin:0}
+.hero-foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.25rem 3rem}
+.byline{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);line-height:1.7}
+.byline strong{color:var(--ink);font-weight:600}
+
+/* ---------- figures ---------- */
+figure{margin:0}
+.frame{position:relative;overflow:hidden;background:var(--surface)}
+.frame img,.frame video{width:100%}
+.stamp{position:absolute;right:.9rem;bottom:.7rem;font-family:var(--mono);font-weight:600;font-size:clamp(.72rem,1.5vw,.95rem);letter-spacing:.12em;color:var(--stamp);text-shadow:0 0 6px var(--stamp-shadow),0 1px 2px var(--stamp-shadow);font-variant-numeric:tabular-nums;pointer-events:none}
+.hands{position:absolute;left:.75rem;top:.75rem;background:var(--accent);color:var(--accent-ink);font-family:var(--mono);font-weight:600;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .55rem}
+figcaption{font-family:var(--mono);font-size:.76rem;line-height:1.55;color:var(--ink-soft);padding-top:.6rem;max-width:62ch}
+.fig-hero .frame img{aspect-ratio:16/9;object-fit:cover;object-position:50% 58%}
+@media (max-width:640px){.fig-hero .frame img{aspect-ratio:4/3}}
+.grid3 > .wide{grid-column:1/-1;width:100%;max-width:68rem;margin-inline:auto;margin-block:.9rem}
+.grid3 > .wide.doc{max-width:50rem}
+.grid3 > .duo{grid-column:1/-1;width:100%;max-width:58rem;margin-inline:auto;margin-block:.9rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.grid3 > .split{grid-column:1/-1;width:100%;max-width:60rem;margin-inline:auto;margin-block:.9rem;display:grid;grid-template-columns:minmax(0,21rem) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.25rem);align-items:center}
+.grid3 > .split.rev{grid-template-columns:minmax(0,1fr) minmax(0,21rem)}
+.split.rev > figure{order:2}
+.split-text{display:flex;flex-direction:column;gap:1.35rem;min-width:0}
+@media (max-width:760px){
+  .grid3 > .split,.grid3 > .split.rev{grid-template-columns:minmax(0,1fr);max-width:var(--col)}
+  .split.rev > figure{order:0}
+  .split > figure{max-width:24rem}
+}
+@media (max-width:520px){.grid3 > .duo{grid-template-columns:minmax(0,1fr);max-width:24rem;margin-inline:0}}
+
+/* video sound toggle */
+.snd{position:absolute;left:.75rem;bottom:.65rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--on-photo);background:var(--photo-scrim);border:1px solid color-mix(in srgb,var(--on-photo) 55%,transparent);padding:.38rem .65rem;cursor:pointer}
+.snd:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.snd[aria-pressed="true"]{background:var(--on-photo);color:#10161f;border-color:var(--on-photo)}
+
+/* ---------- chapters ---------- */
+.ch-stamp{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums}
+h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2.5rem,7.2vw,4.6rem);line-height:.9;letter-spacing:-.005em;margin:.15rem 0 .35rem;text-wrap:balance}
+.lede p:first-of-type{font-size:1.3rem;line-height:1.5}
+.cliff{font-style:italic}
+.solved{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sea);font-weight:600;border-top:1px solid var(--line);padding-top:.7rem}
+
+/* open questions */
+.loops{border-block:1px solid var(--ink);padding-block:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.65rem}
+.loops h3{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin:0;color:var(--ink-soft)}
+.loops ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.45rem;counter-reset:q}
+.loops li{counter-increment:q;display:grid;grid-template-columns:2.1rem minmax(0,1fr);align-items:baseline}
+.loops li::before{content:counter(q) "?";font-family:var(--display);font-weight:800;font-size:1.7rem;line-height:1;color:var(--accent)}
+
+/* quiz */
+.quiz{background:var(--surface);border:1px solid var(--line);padding:clamp(1.1rem,3vw,1.75rem);display:flex;flex-direction:column;gap:1rem}
+.quiz-q{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(1.7rem,4.5vw,2.3rem);line-height:1}
+.quiz-opts{display:flex;flex-wrap:wrap;gap:.6rem}
+.quiz-opts button{font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;padding:.7rem 1rem;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:background .15s,color .15s}
+.quiz-opts button:hover:not(:disabled){background:var(--ink);color:var(--bg)}
+.quiz-opts button:disabled{cursor:default;opacity:.45}
+.quiz-opts button.right{background:var(--sea);border-color:var(--sea);color:var(--bg);opacity:1}
+.quiz-opts button.wrong{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);opacity:1;text-decoration:line-through}
+.quiz-a{display:flex;flex-direction:column;gap:.5rem}
+.quiz-a strong{font-family:var(--display);font-weight:900;font-size:clamp(2.6rem,8vw,4rem);line-height:.9;text-transform:uppercase;color:var(--accent)}
+
+/* receipt */
+.receipt{font-family:var(--mono);font-size:.86rem;line-height:1.5;border-top:2px dashed var(--ink-soft);border-bottom:2px dashed var(--ink-soft);padding-block:1.1rem;margin:0;display:flex;flex-direction:column;gap:.5rem;font-variant-numeric:tabular-nums}
+.receipt div{display:flex;align-items:baseline;gap:.5rem}
+.receipt dt{flex:0 1 auto;min-width:0}
+.receipt div::after{content:"";order:1;flex:1 1 1rem;border-bottom:1px dotted var(--ink-soft);transform:translateY(-.25em)}
+.receipt dd{order:2;margin:0;font-weight:600;white-space:nowrap}
+.ask{font-size:1.3rem;line-height:1.45}
+.next{font-family:var(--mono);font-size:.8rem;line-height:1.6;color:var(--ink-soft);border-left:3px solid var(--accent);padding-left:.9rem}
+
+@media (prefers-reduced-motion:reduce){.tr-days li,.quiz-opts button{transition:none}}
+</style>
+
+<div class="tracker" aria-hidden="true">
+  <div class="tr-now"><span class="tr-label">Флешбек</span><span id="trNow">13 мая · Нячанг</span></div>
+  <ol class="tr-days" id="trDays">
+    <li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
+  </ol>
+</div>
+
+<div class="page">
+<header class="hero" data-now="13 мая · Нячанг" data-days="13">
+  <div class="route"><span>Москва</span><span>→</span><span>Гуанчжоу</span><span>→</span><b>Нячанг · Далат · Дананг</b><span>→</span><span>Гуанчжоу</span><span>→</span><span>Москва</span></div>
+  <h1><span>Вьетнамские</span><span class="l2">флешбеки</span></h1>
+  <div class="hero-foot">
+    <p class="dek">Десять дней, один вскрытый чемодан, две ночи в автобусе и зверь, который спал на обеденном столе.</p>
+    <p class="byline"><strong>Рассказывает Ольга</strong><br>В кадре и за кадром — Серёжа<br>8–18 мая 2026 · читать 7 минут</p>
+  </div>
+  <figure class="fig-hero">
+    <div class="frame">
+      <img src="media/01-pool.jpg" width="2400" height="1800" alt="Ольга стоит по пояс в воде у края бассейна, который сливается с заливом; слева пальмы, вдали горы и город">
+      <span class="stamp">13.05.26 09:03</span>
+    </div>
+    <figcaption>Отпуск, каким его принято показывать. Ниже — каким он был.</figcaption>
+  </figure>
+</header>
+
+<article class="story">
+
+<section class="grid3 lede" data-now="13 мая · 21:24 · трасса на Дананг" data-days="13">
+  <p>Снимок сверху сделан 13 мая в 09:03. Запомните время. Через 12 часов 21 минуту я буду лежать вот здесь.</p>
+  <figure class="wide">
+    <div class="frame">
+      <img src="media/02-bus.jpg" width="2000" height="1126" loading="lazy" alt="Синий неоновый свет в спальном автобусе: на переднем плане Сергей, за ним в капсуле Ольга под клетчатым пледом">
+      <span class="stamp">13.05.26 21:24</span>
+    </div>
+    <figcaption>Спальный автобус Нячанг — Дананг. Плед выдают. Сон в комплект не входит.</figcaption>
+  </figure>
+  <p>Это спальный автобус. Вместо кресел в нём капсулы с неоновой подсветкой, вместо ремня безопасности клетчатый плед. Впереди больше пятисот километров на север. План простой: ночь туда, день там, ночь обратно. Гостиницу в Дананге мы не бронировали, потому что спать в нём не собирались.</p>
+  <p>Всё это ради моста, который держат две каменные ладони. Вы его видели, он есть у всех. Сколько времени мы на нём провели, я узнала уже дома, когда сверяла время на снимках. Цифру назову ниже, но сначала вам придётся её угадать.</p>
+  <div class="loops">
+    <h3>Что выяснится по дороге</h3>
+    <ol>
+      <li>Что исчезло из нашего чемодана в Гуанчжоу</li>
+      <li>Кто спал на столе посреди кофейной фермы</li>
+      <li>Сколько минут длилось то, ради чего мы ехали две ночи</li>
+    </ol>
+  </div>
+  <p class="cliff">А пока отмотаю на четыре дня назад. Там стоит чемодан, и в нём лежит записка не от нас.</p>
+</section>
+
+<section class="grid3" data-now="9 мая · Гуанчжоу → Нячанг" data-days="8,9">
+  <div class="ch-stamp">08–09.05 · Москва → Гуанчжоу → Камрань</div>
+  <h2>Записка в чемодане</h2>
+  <p>Летели мы через Китай. Чемодан сдали в Шереметьеве вечером 8 мая и снова увидели уже во Вьетнаме, на следующий день. Вечером в номере мы его открыли. Поверх вещей лежал голубой бланк с иероглифами.</p>
+  <figure class="wide doc">
+    <div class="frame">
+      <img src="media/03-notice.jpg" width="1800" height="1282" loading="lazy" alt="Голубой бланк авиакомпании: Notice of Checked Baggage Inspection, отмечена графа Battery, количество 2">
+      <span class="stamp">09.05.26 20:35</span>
+    </div>
+    <figcaption>Notice of Checked Baggage Inspection. Галочка стоит напротив слова Battery, в графе «количество» двойка.</figcaption>
+  </figure>
+  <p>«Уведомление о досмотре зарегистрированного багажа». Перевожу с канцелярского: пока мы пересаживались в Гуанчжоу, чемодан просветили, открыли и вынули из него две батарейки. Оформлено безупречно. Дата, подпись инспектора, подпись сотрудника авиакомпании и отдельный лист с правилами перевозки пауэрбанков, где приведена формула пересчёта миллиампер-часов в ватт-часы.</p>
+  <p>Я была готова к потерянному багажу, к разбитому колесу, к чужому чемодану на ленте. К тому, что нас обыщут и вежливо оставят записку с формулой, меня не готовил никто.</p>
+  <p>Если летите через Китай, всё, в чём есть литий, кладите в ручную кладь. Иначе вам тоже напишут.</p>
+  <p class="solved">Вопрос 1 закрыт: две батарейки</p>
+</section>
+
+<section class="grid3" data-now="10 мая · остров Хон Че" data-days="10">
+  <div class="ch-stamp">10.05 · остров Хон Че</div>
+  <h2>Остров, над которым я летала</h2>
+  <p>На остров Хон Че из Нячанга едут по воздуху. Канатная дорога тянется над морем больше трёх километров. На острове стоит парк VinWonders: зоопарк, аквапарк, сад кактусов и замок. Мне хватило бы одного троса.</p>
+  <figure class="wide">
+    <div class="frame">
+      <video id="vZip" muted loop playsinline preload="metadata" poster="media/04-zipline.jpg" src="media/04-zipline.mp4" width="1600" height="900" aria-label="Видео: Ольга летит на зиплайне над парком, за ней колесо обозрения"></video>
+      <button class="snd" type="button" aria-pressed="false" data-for="vZip">Звук</button>
+      <span class="stamp">10.05.26 11:38</span>
+    </div>
+    <figcaption>Зиплайн над парком. Серёжа снимает и, судя по ровному кадру, совершенно за меня не волнуется.</figcaption>
+  </figure>
+  <p>Со стороны кажется, что я раскинула руки от восторга. На самом деле я проверяю, держит ли страховка.</p>
+  <p>Вечером замок подсветили, над ним запустили фейерверк, и мы сняли кадр, который обязан быть в любом рассказе о поездке вдвоём.</p>
+  <figure class="wide">
+    <div class="frame">
+      <img src="media/05-fireworks.jpg" width="2000" height="1126" loading="lazy" alt="Ночное селфи Сергея и Ольги на фоне подсвеченного замка и фейерверка">
+      <span class="stamp">10.05.26 20:08</span>
+    </div>
+    <figcaption>Редкое селфи, на котором Серёжа не раскинул руки. Почему это важно, станет понятно в Далате.</figcaption>
+  </figure>
+  <p class="cliff">На этом романтика заканчивается. Дальше горы, черти и зверь, которого я не смогла опознать.</p>
+</section>
+
+<section class="grid3" data-now="11 мая · Далат" data-days="11">
+  <div class="ch-stamp">11.05 · Далат, 1500 м над морем</div>
+  <h2>Пять остановок до заката</h2>
+  <p>В шесть утра мы уже были в дороге. К семи автобус полз по горному перевалу, к половине девятого привёз нас в город, куда вьетнамцы уезжают от жары, а французы сто лет назад уезжали от вьетнамской жары.</p>
+  <div class="split">
+    <figure>
+      <div class="frame">
+        <img src="media/06-heads.jpg" width="1350" height="1800" loading="lazy" alt="Ольга в соломенной шляпе сидит на камне посреди озера между двумя гигантскими каменными головами, заросшими зеленью">
+        <span class="stamp">11.05.26 09:45</span>
+      </div>
+      <figcaption>Третья в разговоре.</figcaption>
+    </figure>
+    <div class="split-text">
+      <p>Первая остановка — парк скульптур у озера Туенлам. Две головы размером с дом смотрят друг на друга через воду. Между ними как раз помещается один человек, и очередь из таких людей стоит на берегу.</p>
+      <p>Вторая — «Сумасшедший дом», гостиница без единого прямого угла. О ней расскажу отдельно, иначе мы отсюда не уедем.</p>
+      <p>Третья — кофейная ферма. Нам показали, как сушат зёрна, и подвели к длинному деревянному столу. На столе спал зверь.</p>
+    </div>
+  </div>
+  <div class="duo">
+    <figure>
+      <div class="frame">
+        <img src="media/07-binturong.jpg" width="1350" height="1800" loading="lazy" alt="Ольга с настороженным лицом держит руку на спящем чёрном лохматом звере, который лежит на деревянном столе">
+        <span class="stamp">11.05.26 13:01</span>
+      </div>
+      <figcaption>Моё лицо отвечает на вопрос «ну как он на ощупь?».</figcaption>
+    </figure>
+    <figure>
+      <div class="frame">
+        <img src="media/08-jump.jpg" width="1350" height="1800" loading="lazy" alt="Сергей в прыжке звездой над деревянным мостиком, за ним водопад, на переднем плане красные цветы">
+        <span class="hands">Руки Серёжи: 1</span>
+        <span class="stamp">11.05.26 14:34</span>
+      </div>
+      <figcaption>Водопад Датанла. С этого кадра я веду счёт.</figcaption>
+    </figure>
+  </div>
+  <p>Это бинтуронг. По-английски bearcat, «медвекот», хотя он не медведь и не кот, а родственник циветт. Про бинтуронгов пишут, что они пахнут попкорном. Проверять я не стала.</p>
+  <p class="solved">Вопрос 2 закрыт: бинтуронг</p>
+  <p>Четвёртая остановка — водопад Датанла, и здесь нужно объяснить одну вещь про Серёжу. Когда он видит красивое место, он раскидывает руки. Иногда вместе с ногами. Я завела счётчик, следите за ним.</p>
+  <p>Пятая — пагода Линь Фуок, целиком выложенная мозаикой из битой посуды. Под ней устроен ад: тёмный коридор, красный свет, грешники и черти со светящимися глазами. Наверху, уже на солнце, мы вытянули предсказание. Номер 72, «trung kiết». Переводчик утверждает, что это «средняя удача».</p>
+  <p class="cliff">Запомните эту бумажку. Она сработает через три дня, в 14:48.</p>
+</section>
+
+<section class="grid3" data-now="12–13 мая · Нячанг, северный берег" data-days="12,13">
+  <div class="ch-stamp">12–13.05 · Нячанг, северный берег</div>
+  <h2>Сутки без плана</h2>
+  <p>После Далата мы сдались и на сутки переехали в отель на северном краю залива. Там есть бассейн, вода в котором обрывается прямо в море. Кадр из самого начала снят в нём. Ещё я лежала на этой воде звездой и собиралась так провести остаток отпуска.</p>
+  <p>Утром Серёжа надел вьетнамскую шляпу, встал на одну ногу и сложил ладони перед грудью. Руки он при этом не раскинул, поэтому в счётчик поза не идёт.</p>
+  <p>В полдень мы выехали из отеля. В четыре бродили между кирпичными башнями Понагар, которым больше тысячи лет. В 21:24 я лежала в автобусе под клетчатым пледом. Этот кадр вы уже видели.</p>
+</section>
+
+<section class="grid3" data-now="14 мая · Дананг" data-days="14">
+  <div class="ch-stamp">14.05 · Дананг · 520 км от подушки</div>
+  <h2>Две ночи ради моста</h2>
+  <p>Про ночь в автобусе скажу одно. В 05:11 я снимала через стекло пустую улицу незнакомого города, а так выспавшиеся люди себя не ведут.</p>
+  <p>В 09:21 мы стояли у канатной дороги Ба На Хиллз. Наверху, на высоте около 1400 метров, построили французскую деревню, замок, сады и его. Золотой мост, сто пятьдесят метров дуги на двух каменных ладонях.</p>
+  <div class="quiz" id="quiz">
+    <div class="quiz-q">Первый кадр на мосту снят в 11:08. Сколько мы там пробыли?</div>
+    <div class="quiz-opts">
+      <button type="button" id="q-a" data-ok="0">Два часа</button>
+      <button type="button" id="q-b" data-ok="0">Пятьдесят минут</button>
+      <button type="button" id="q-c" data-ok="1">Двадцать минут</button>
+    </div>
+    <div class="quiz-a" id="quizA" hidden>
+      <strong>20 минут</strong>
+      <p>Последнее видео с моста записано в 11:28. На каждую минуту на мосту пришёлся примерно час в автобусе.</p>
+    </div>
+  </div>
+  <figure class="wide">
+    <div class="frame">
+      <img src="media/09-bridge.jpg" width="2000" height="1126" loading="lazy" alt="Сергей и Ольга делают селфи с раскинутыми руками на фоне Золотого моста, который держат гигантские каменные ладони; на мосту плотная толпа">
+      <span class="hands">Руки Серёжи: 2</span>
+      <span class="stamp">14.05.26 11:14</span>
+    </div>
+    <figcaption>На заднем плане все остальные, кто приехал за этим же кадром.</figcaption>
+  </figure>
+  <p class="solved">Вопрос 3 закрыт: двадцать минут</p>
+  <p>Теперь честно. На открытках мост пустой и плывёт в облаках. В жизни по нему движется плотная колонна людей с зонтиками от солнца, и снять ладони без чужих голов можно только сбоку, с соседней площадки. Жалею ли я о поездке? Ни об одной минуте из двадцати.</p>
+  <div class="split rev">
+    <figure>
+      <div class="frame">
+        <video id="vRain" muted loop playsinline preload="metadata" poster="media/10-rain.jpg" src="media/10-rain.mp4" width="720" height="1280" aria-label="Видео: тропический ливень заливает площадь с деревянными столами под полосатым навесом, люди прячутся под зонтами"></video>
+        <button class="snd" type="button" aria-pressed="false" data-for="vRain">Звук</button>
+        <span class="stamp">14.05.26 14:54</span>
+      </div>
+      <figcaption>Средняя удача в действии. Стакан на столе не наш, но держался достойно.</figcaption>
+    </figure>
+    <div class="split-text">
+      <p>В 14:48 сработало предсказание номер 72. Мы сидели на площади, где шёл фестиваль крафтового пива, и небо упало.</p>
+      <p>Ливень в горах не начинается. Он включается. За минуту площадь опустела, по столам застучало так, что не слышно соседа, а мои белые брюки стали брюками в горошек.</p>
+      <p>Удача и правда оказалась средней. Дождь пришёл через три часа после моста, а мог бы прийти вместо него.</p>
+    </div>
+  </div>
+  <div class="split">
+    <figure>
+      <div class="frame">
+        <img src="media/11-buddha.jpg" width="1350" height="1800" loading="lazy" alt="Подсвеченная золотистым светом белая статуя на лотосе на фоне тёмно-синего вечернего неба">
+        <span class="stamp">14.05.26 18:26</span>
+      </div>
+      <figcaption>Полуостров Сонча, пагода Линь Унг.</figcaption>
+    </figure>
+    <div class="split-text">
+      <p>К вечеру мы спустились к морю. На полуострове Сонча стоит Леди Будда, 67 метров высоты. В сумерках её подсвечивают, и небо за ней становится того самого синего цвета, что и свет в нашем автобусе.</p>
+      <p>У соседнего здания, прямо над табличкой «Restricted area. Please do not enter», спала рыжая собака. Ей было можно.</p>
+      <p>Потом мы снова легли в капсулы. В 06:26 утра я сфотографировала знакомую улицу Нячанга. Две ночи, один день, один мост.</p>
+    </div>
+  </div>
+</section>
+
+<section class="grid3" data-now="15 мая · Нячанг" data-days="15">
+  <div class="ch-stamp">15.05 · Нячанг, последний день</div>
+  <h2>Сорок этажей под ногами</h2>
+  <p>Нормальные люди после двух ночей в автобусе спят. Мы в одиннадцать утра поднимались по лестнице к белому Будде пагоды Лонг Шон, через полчаса стояли у каменного собора, а на закате оказались на крыше.</p>
+  <figure class="wide">
+    <div class="frame">
+      <img src="media/12-glass.jpg" width="2000" height="1126" loading="lazy" alt="Селфи сверху: Сергей и Ольга стоят на стеклянном полу с раскинутыми руками, далеко под ними улица с машинами">
+      <span class="hands">Руки Серёжи: 3</span>
+      <span class="stamp">15.05.26 18:02</span>
+    </div>
+    <figcaption>Бар Skylight. Под стеклом улица, по ней едут машины размером с рисовое зерно.</figcaption>
+  </figure>
+  <p>Часть пола там сделана из стекла. Серёжа встал на него и сделал то, что делает всегда. Я тоже подняла руку, но по другой причине: держалась за воздух.</p>
+  <p>Счётчик на этом останавливаю. В архиве раскинутых рук гораздо больше, но у меня лимит, пятнадцать кадров на выпуск.</p>
+</section>
+
+<section class="grid3" data-now="16–18 мая · Гуанчжоу" data-days="16,17,18">
+  <div class="ch-stamp">16–18.05 · Гуанчжоу</div>
+  <h2>Полтора дня на сдачу</h2>
+  <p>Обратный рейс снова шёл через Гуанчжоу, и на этот раз мы вышли в город. Пересадка длиной в полтора дня. Для Китая это ничто, для одного зоопарка в самый раз.</p>
+  <p>В сафари-парке «Чимелонг» мы провели семь часов, с десяти утра до пяти вечера. Больше всего я ждала встречи с большой пандой. Думала, она будет жевать бамбук или хотя бы сидеть.</p>
+  <div class="duo">
+    <figure>
+      <div class="frame">
+        <img src="media/14-panda.jpg" width="1350" height="1800" loading="lazy" alt="Большая панда лежит на деревянном полу лицом вниз, вид сзади">
+        <span class="stamp">17.05.26 13:30</span>
+      </div>
+      <figcaption>Самый точный мой портрет на десятый день поездки.</figcaption>
+    </figure>
+    <figure>
+      <div class="frame">
+        <video id="vDeer" muted loop playsinline preload="metadata" poster="media/13-deer.jpg" src="media/13-deer.mp4" width="900" height="1600" aria-label="Видео: олени окружили Ольгу и тянутся к корму, который она поднимает над головой"></video>
+        <button class="snd" type="button" aria-pressed="false" data-for="vDeer">Звук</button>
+        <span class="stamp">17.05.26 13:43</span>
+      </div>
+      <figcaption>Корм продают в голубых тубах. Олени знают об этом лучше покупателей.</figcaption>
+    </figure>
+  </div>
+  <p>Панда лежала лицом в пол и не шевелилась. Мы постояли рядом из солидарности. Через тринадцать минут меня окружили олени, и я подняла корм над головой, как поднимают руки при ограблении.</p>
+  <p>А ещё там взвешивают коал. Коала обнимает палку, палку подвешивают к весам, и зверь висит с выражением человека, которого разбудили в шесть утра. Это видео я приберегла.</p>
+  <div class="split rev">
+    <figure>
+      <div class="frame">
+        <img src="media/15-tower.jpg" width="1350" height="1800" loading="lazy" alt="Ольга в красной футболке стоит на набережной ночью, за ней светится розовым Кантонская башня с лучами прожекторов">
+        <span class="stamp">17.05.26 22:54</span>
+      </div>
+      <figcaption>Шестьсот метров света за спиной, ноль сил на лице.</figcaption>
+    </figure>
+    <div class="split-text">
+      <p>Вечером мы дошли до Кантонской башни. Она переливается, из её вершины бьют лучи, по набережной гуляет полгорода.</p>
+      <p>Посмотрите на моё лицо на этом снимке. Так выглядит человек, у которого было десять дней отпуска и ровно сутки отдыха.</p>
+    </div>
+  </div>
+</section>
+
+<section class="grid3" data-now="18 мая · домой" data-days="18">
+  <div class="ch-stamp">18.05 · итого</div>
+  <h2>Счёт</h2>
+  <dl class="receipt">
+    <div><dt>Ночей в поездке</dt><dd>10</dd></div>
+    <div><dt>Из них в автобусе</dt><dd>2</dd></div>
+    <div><dt>Минут на Золотом мосту</dt><dd>20</dd></div>
+    <div><dt>Батареек изъято</dt><dd>2</dd></div>
+    <div><dt>Предсказаний сбылось</dt><dd>1 из 1</dd></div>
+    <div><dt>Панд, которым было не до нас</dt><dd>1</dd></div>
+    <div><dt>Фото и видео в телефоне</dt><dd>1316 + 138</dd></div>
+    <div><dt>Показано вам</dt><dd>15</dd></div>
+  </dl>
+  <p>Мост занял двадцать минут из десяти дней. Но когда меня спрашивают про Вьетнам, первым я вспоминаю не его. Я вспоминаю синий свет в автобусе, клетчатый плед и Серёжу, который снимает нас через проход, пока я делаю вид, что мне удобно.</p>
+  <p class="ask">Теперь вопрос к вам. Две ночи дороги ради двадцати минут: вы бы поехали? Расскажите в комментариях про самое невыгодное по времени решение в путешествии, о котором вы не пожалели.</p>
+  <p class="next">В следующем выпуске Гуанчжоу целиком. У меня оттуда 76 видео, и коала на весах ждёт своего часа.</p>
+</section>
+
+</article>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* tracker: which day of the trip the story is on */
+  var nowEl = document.getElementById('trNow');
+  var dayEls = [].slice.call(document.querySelectorAll('#trDays li'));
+  var marks = [].slice.call(document.querySelectorAll('[data-now]'));
+  function setMark(el){
+    nowEl.textContent = el.getAttribute('data-now');
+    var days = el.getAttribute('data-days').split(',');
+    dayEls.forEach(function(li){ li.classList.toggle('on', days.indexOf(li.textContent) !== -1); });
+  }
+  setMark(marks[0]);
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) setMark(e.target); });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    marks.forEach(function(m){ io.observe(m); });
+  }
+
+  /* videos: play muted while on screen, sound on request */
+  var vids = [].slice.call(document.querySelectorAll('video'));
+  if (reduce){
+    vids.forEach(function(v){ v.controls = true; });
+    [].forEach.call(document.querySelectorAll('.snd'), function(b){ b.hidden = true; });
+  } else if ('IntersectionObserver' in window){
+    var vo = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var v = e.target;
+        if (e.isIntersecting){ var p = v.play(); if (p && p.catch) p.catch(function(){ v.controls = true; }); }
+        else { v.pause(); }
+      });
+    }, {threshold:0.35});
+    vids.forEach(function(v){ vo.observe(v); });
+  } else {
+    vids.forEach(function(v){ v.controls = true; });
+  }
+  [].forEach.call(document.querySelectorAll('.snd'), function(btn){
+    btn.addEventListener('click', function(){
+      var v = document.getElementById(btn.getAttribute('data-for'));
+      var on = btn.getAttribute('aria-pressed') !== 'true';
+      vids.forEach(function(o){ if (o !== v) o.muted = true; });
+      [].forEach.call(document.querySelectorAll('.snd'), function(b){ b.setAttribute('aria-pressed','false'); b.textContent = 'Звук'; });
+      v.muted = !on;
+      if (on){ btn.setAttribute('aria-pressed','true'); btn.textContent = 'Без звука'; var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+    });
+  });
+
+  /* quiz */
+  var opts = [].slice.call(document.querySelectorAll('.quiz-opts button'));
+  opts.forEach(function(b){
+    b.addEventListener('click', function(){
+      opts.forEach(function(o){
+        o.disabled = true;
+        if (o.getAttribute('data-ok') === '1') o.classList.add('right');
+      });
+      if (b.getAttribute('data-ok') !== '1') b.classList.add('wrong');
+      document.getElementById('quizA').hidden = false;
+    });
+  });
+})();
+</script>
+
+</body></html>
